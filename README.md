@@ -20,7 +20,7 @@ I’m open to **internship opportunities** and **freelance projects**.
 ## 📁 Featured Projects
 
 ### Weather API
-**Description:** A functional and minimal wearher widget capable of showing the weather over the globe.  
+**Description:** A functional and minimal weather widget capable of showing the weather over the globe.  
 **Tech Stack:** HTML, CSS, JavaScript  
 
 ---
