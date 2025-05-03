@@ -1,59 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Weather API</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Weather App</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+  <link rel="stylesheet" href="style.css" />
 </head>
-
-
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-
-
 <body>
-    <div id="app">
-        <!-- search bar -->
-        <div id="searchBar">
-            <input type="text" id="searchBarInput" placeholder="Search by City">
-            <button onclick="getWeather()" id="searchIcon">
-                <i class="fa fa-search" aria-hidden="true"></i>
-            </button>
-        </div>
-
-        <div id="info">
-            <p id="date"></p>
-            <h3 id="city"></h3>
-        </div>
-
-        <div id="tempImg"></div>
-
-        <div id="description">
-        </div>
-
-        <div id="temp"></div>
-
-        <div id="extraInfo">
-            <div class="col">
-                <div class="info">
-                    <h5>Highs</h5>
-                    <p id="tempMax"></p>
-                </div>
-            </div>
-
-            <div class="col">
-                <div class="info">
-                    <h5>Lows</h5>
-                    <p id="tempMin"></p>
-                </div>
-            </div>
-        </div>
+  <div id="app">
+    <!-- Search Bar -->
+    <div id="searchBar">
+      <input type="text" id="searchBarInput" placeholder="Search by City" />
+      <button onclick="getWeather()" id="searchIcon">
+        <i class="fa fa-search" aria-hidden="true"></i>
+      </button>
     </div>
 
+    <!-- Info Section -->
+    <div id="info">
+      <p id="date"></p>
+      <h3 id="city"></h3>
+    </div>
+
+    <div id="tempImg"></div>
+    <div id="description"></div>
+    <div id="temp"></div>
+    <div id="feelsLike"></div>
+
+    <!-- Extra Info -->
+    <div id="extraInfo">
+      <div class="col">
+        <div class="info">
+          <h5>Highs</h5>
+          <p id="tempMax"></p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="info">
+          <h5>Lows</h5>
+          <p id="tempMin"></p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="info">
+          <h5>Humidity</h5>
+          <p id="humidity"></p>
+        </div>
+      </div>
+      <div class="col">
+        <div class="info">
+          <h5>Wind</h5>
+          <p id="wind"></p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Forecast -->
+    <div id="forecast">
+      <h4>5-Day Forecast</h4>
+      <div id="forecastCards"></div>
+    </div>
+  </div>
+
+  <!-- Loading Spinner -->
+  <div id="loading" style="display: none">
+    <i class="fas fa-spinner fa-spin fa-3x"></i>
+  </div>
+
+  <script src="script.js"></script>
 </body>
-
-<script src="script.js"></script>
-
 </html>

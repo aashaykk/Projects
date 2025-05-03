@@ -3,98 +3,157 @@
     padding: 0;
     box-sizing: border-box;
     font-family: 'Montserrat', sans-serif;
-}
-
-#app {
-    position: relative;
-    width: 414px;
-    height: 420px;
-    display: block;
-    margin: 70px auto;
-    text-align: center;
-    padding: 40px 0px;
-    overflow: hidden;
-    border-radius: 45px;
-    background: linear-gradient(to right, #8e2de2, #4a00e0);
-
-
-}
-
-#searchBar {
+  }
+  
+  body {
+    background: #222;
     display: flex;
-    padding: 0 40px;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 20px;
+  }
+  
+  #app {
+    margin-top: 99px;
+    width: 100%;
+    max-width: 480px;
+    padding: 40px 20px;
+    border-radius: 25px;
+    background: linear-gradient(145deg, #8e2de2, #4a00e0);
+    text-align: center;
+    color: white;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  }
+  
+  #searchBar {
+    display: flex;
+    align-items: center;
+    gap: 10px;
     margin-bottom: 30px;
-}
-
-#searchBarInput {
-    background-color: none;
+    border-bottom: 1px solid lightblue;
+    padding-bottom: 10px;
+  }
+  
+  #searchBarInput {
+    flex: 1;
+    background: transparent;
     border: none;
     outline: none;
-    width: 90%;
-    background: transparent;
     color: #fff;
-    border-bottom: solid 1px lightblue;
-
-}
-
-input::placeholder {
+    font-size: 1rem;
+  }
+  
+  input::placeholder {
     color: #fff;
     opacity: 0.6;
-
-}
-
-#info {
-    line-height: 0.5rem;
-    color: #fff;
-
-}
-
-#info h3{
-    font-size: 40px;
-    font-weight: bold;
-    text-transform: uppercase;
-    margin: 0.56em;
-
-}
-
-#description {
-    text-transform: uppercase;
-    color: #fff;
-}
-
-#temp {
-    color: #fff;
-    font-size: 30px;
-    margin-top: 20px;
-}
-
-
-#searchIcon {
-    border: none;
+  }
+  
+  #searchIcon {
     background: transparent;
-    color: #fff;
+    border: none;
+    color: white;
     font-size: 1.5rem;
     cursor: pointer;
-    transition: 0.5s;
-    
-}
-#searchIcon:hover {
-    color: rgb(11, 145, 241);
-}
-
-#extraInfo {
-    position: absolute;
-    bottom: 5px;
-    width: 100%;
-    display: flex;
-    justify-content: space-around;
-    color: #fff;
-    padding-bottom: 30px;
-
-
-}
-
-#extraInfo h5 {
-    font-size: 1.1rem;
+    transition: color 0.3s;
+  }
+  
+  #searchIcon:hover {
+    color: #0b91f1;
+  }
+  
+  #info h3 {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin: 0.5em 0;
     text-transform: uppercase;
-}
+  }
+  
+  #description {
+    margin: 15px 0;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  }
+  
+  #temp {
+    font-size: 2rem;
+    margin: 10px 0;
+  }
+  
+  #feelsLike {
+    font-size: 1rem;
+    margin-bottom: 15px;
+    opacity: 0.8;
+  }
+  
+  #tempImg img {
+    width: 80px;
+    height: 80px;
+  }
+  
+  #extraInfo {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 30px;
+    gap: 10px;
+  }
+  
+  .col {
+    flex: 1 1 45%;
+    text-align: center;
+  }
+  
+  .col .info h5 {
+    font-size: 1rem;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+  
+  .col .info p {
+    font-size: 1rem;
+  }
+  
+  #forecast {
+    margin-top: 40px;
+  }
+  
+  #forecast h4 {
+    font-size: 1.3rem;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+  }
+  
+  #forecastCards {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 10px;
+    padding: 10px 0;
+  }
+  
+  .forecast-card {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 10px;
+    border-radius: 10px;
+    min-width: 90px;
+    text-align: center;
+    color: #fff;
+    flex-shrink: 0;
+  }
+  
+  .forecast-card img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  #loading {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    display: none;
+    z-index: 999;
+  }
+  
